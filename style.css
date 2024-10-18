@@ -26,15 +26,25 @@ body {
   margin-bottom: 170px;
 }
 
+@keyframes subtleBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px); /* Reduced bounce height */
+  }
+}
+
 .subtitle {
   text-align: center;
   color: #f6ac62;
   font-family: 'Londrina Outline', cursive;
   font-size: 5rem;
   padding: 8px 16px;
-  text-shadow: 0 3px 10px rgba(10, 10, 10, 40);
-  animation: bounce 1s infinite;
+  text-shadow: 0 3px 10px rgba(10, 10, 10, 0.4);
+  animation: subtleBounce 2s infinite; /* Slowed down the animation */
 }
+
 
 h1 {
   text-align: center;
