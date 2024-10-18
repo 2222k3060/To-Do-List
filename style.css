@@ -9,6 +9,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-size: 16px; /* Base font size */
+  line-height: 1.5;
   background: rgb(136, 0, 255);
   background: linear-gradient(
     0deg,
@@ -24,15 +26,8 @@ body {
   padding: 20px;
   box-sizing: border-box;
   margin-bottom: 170px;
-}
-
-@keyframes subtleBounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px); /* Reduced bounce height */
-  }
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .subtitle {
@@ -41,10 +36,9 @@ body {
   font-family: 'Londrina Outline', cursive;
   font-size: 5rem;
   padding: 8px 16px;
-  text-shadow: 0 3px 10px rgba(10, 10, 10, 0.4);
-  animation: subtleBounce 2s infinite; /* Slowed down the animation */
+  text-shadow: 0 3px 10px rgba(10, 10, 10, 40);
+  animation: bounce 1s infinite;
 }
-
 
 h1 {
   text-align: center;
@@ -69,12 +63,15 @@ h1 {
   outline: none;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+
 }
 
 .js-date-input:hover,
 .js-time-input:hover {
   cursor: pointer;
   font-weight: bold;
+  transform: scale(1.05);
 }
 
 .js-add-grid {
@@ -384,6 +381,7 @@ Animating title
 .js-add-html::-webkit-scrollbar-track {
   background-color: black;
   border-radius: 5px;
+  width: 12px;
 }
 #js-success-notification {
   position: absolute;
@@ -396,7 +394,7 @@ Animating title
   height: 7%;
   left: 2%;
   bottom: 10%;
-  color: #d4edda;
+  color: #6a736c;
 }
 .js-add-html-tasks {
   border: 1px black solid;
@@ -450,6 +448,12 @@ Animating title
 
   .footer {
     font-size: 0.8rem;
+    footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+  
+  
     flex-direction: column;
   }
 }
@@ -476,4 +480,5 @@ Animating title
   .footer p {
     font-size: 10px;
   }
+}
 }
